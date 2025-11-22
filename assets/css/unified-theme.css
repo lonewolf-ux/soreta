@@ -1,0 +1,767 @@
+/* ============================================
+   SORETA ELECTRONICS - UNIFIED THEME SYSTEM
+   Modern Minimalistic Black & White Design
+   ============================================ */
+
+:root {
+    /* Core Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --gray-50: #fafafa;
+    --gray-100: #f5f5f5;
+    --gray-200: #e5e5e5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+
+    /* Theme Variables - Light Mode (Default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f5f5f5;
+    --text-primary: #000000;
+    --text-secondary: #525252;
+    --text-tertiary: #737373;
+    --border-color: #e5e5e5;
+    --hover-overlay: rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    /* Accent Colors */
+    --accent-primary: #000000;
+    --accent-hover: #262626;
+    --accent-light: #f5f5f5;
+
+    /* Status Colors */
+    --success: #16a34a;
+    --warning: #ea580c;
+    --error: #dc2626;
+    --info: #0891b2;
+
+    /* Typography */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #171717;
+    --bg-tertiary: #262626;
+    --text-primary: #fafafa;
+    --text-secondary: #a3a3a3;
+    --text-tertiary: #737373;
+    --border-color: #262626;
+    --hover-overlay: rgba(255, 255, 255, 0.05);
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    --accent-primary: #ffffff;
+    --accent-hover: #fafafa;
+    --accent-light: #262626;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.875rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.lead {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+/* Primary Button - Black background */
+.btn-primary,
+.btn-dark {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+    background: var(--gray-800);
+    border-color: var(--gray-800);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-dark {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-dark:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-100);
+    color: var(--black);
+}
+
+/* Secondary Button - White/Outlined */
+.btn-secondary,
+.btn-light,
+.btn-outline-primary,
+.btn-outline-dark {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--border-color);
+}
+
+.btn-secondary:hover,
+.btn-light:hover,
+.btn-outline-primary:hover,
+.btn-outline-dark:hover {
+    background: var(--gray-50);
+    border-color: var(--gray-300);
+    color: var(--black);
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .btn-secondary,
+[data-theme="dark"] .btn-light,
+[data-theme="dark"] .btn-outline-primary,
+[data-theme="dark"] .btn-outline-dark {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-light:hover,
+[data-theme="dark"] .btn-outline-primary:hover,
+[data-theme="dark"] .btn-outline-dark:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--gray-600);
+    color: var(--white);
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    box-shadow: var(--card-shadow);
+}
+
+.card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    padding: 1rem 1.5rem;
+    background: var(--bg-tertiary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-base);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary) !important;
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+.form-control,
+.form-select {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--black);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    border-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+}
+
+.badge-primary {
+    background: var(--black);
+    color: var(--white);
+}
+
+.badge-secondary {
+    background: var(--gray-200);
+    color: var(--gray-800);
+}
+
+[data-theme="dark"] .badge-primary {
+    background: var(--white);
+    color: var(--black);
+}
+
+[data-theme="dark"] .badge-secondary {
+    background: var(--gray-700);
+    color: var(--gray-200);
+}
+
+/* Status Badges */
+.badge-scheduled {
+    background: var(--gray-100);
+    color: var(--gray-900);
+}
+
+.badge-in-progress {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+[data-theme="dark"] .badge-scheduled {
+    background: var(--gray-800);
+    color: var(--gray-100);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover lift effect */
+.hover-lift {
+    transition: transform var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+/* Text Colors */
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-tertiary { color: var(--text-tertiary) !important; }
+.text-muted { color: var(--text-tertiary) !important; }
+
+/* Background Colors */
+.bg-primary { background: var(--bg-primary) !important; }
+.bg-secondary { background: var(--bg-secondary) !important; }
+.bg-tertiary { background: var(--bg-tertiary) !important; }
+
+/* Borders */
+.border { border: 1px solid var(--border-color) !important; }
+.border-top { border-top: 1px solid var(--border-color) !important; }
+.border-bottom { border-bottom: 1px solid var(--border-color) !important; }
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--card-shadow) !important; }
+.shadow { box-shadow: var(--card-shadow-hover) !important; }
+
+/* Spacing */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background: var(--hover-overlay);
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    /* Tablet styles */
+    .container {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .btn-hero,
+    .btn-hero-outline {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile styles */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+
+    /* Improved button handling - touch-friendly but not full width */
+    .btn {
+        min-height: 44px; /* Touch target accessibility */
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+        width: auto;
+        justify-content: center;
+    }
+
+    .btn-sm {
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-lg {
+        min-height: 48px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Stack buttons in groups on mobile */
+    .d-flex.gap-2,
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+
+    .d-flex.gap-2 .btn,
+    .d-flex.gap-3 .btn {
+        width: 100%;
+    }
+
+    /* Hero section mobile */
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-heading {
+        font-size: 2rem;
+    }
+
+    .hero-lead {
+        font-size: 1rem;
+    }
+
+    /* Service cards */
+    .service-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-brand img {
+        height: 32px;
+        width: 32px;
+    }
+
+    /* Forms */
+    .form-control,
+    .form-select {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .form-label {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Cards */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-header,
+    .card-footer {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    /* Modal */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .modal-content {
+        border-radius: 8px;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+
+    /* Tables */
+    .table th,
+    .table td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* Badges */
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Small mobile styles */
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem 0;
+    }
+
+    .hero-heading {
+        font-size: 1.75rem;
+    }
+
+    .hero-lead {
+        font-size: 0.875rem;
+    }
+
+    .btn-hero,
+    .btn-hero-outline {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+        min-height: 44px;
+    }
+
+    /* Single column stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Typography adjustments */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+
+    /* Better spacing */
+    .mb-4 { margin-bottom: 0.75rem !important; }
+    .mb-5 { margin-bottom: 1rem !important; }
+    .p-4 { padding: 0.75rem !important; }
+
+    /* Form elements */
+    .form-control,
+    .form-select {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .form-label {
+        font-size: 0.8125rem;
+        margin-bottom: 0.375rem;
+    }
+
+    /* Table improvements */
+    .table th,
+    .table td {
+        padding: 0.375rem;
+        font-size: 0.8125rem;
+    }
+
+    /* Badge adjustments */
+    .badge {
+        font-size: 0.6875rem;
+        padding: 0.1875rem 0.375rem;
+    }
+
+    /* Cards */
+    .card-body {
+        padding: 0.75rem;
+    }
+
+    .card-header,
+    .card-footer {
+        padding: 0.625rem 0.75rem;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 1.125rem;
+    }
+
+    .navbar-brand img {
+        height: 28px;
+        width: 28px;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .navbar,
+    .theme-toggle,
+    .btn,
+    .floating-cta {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}

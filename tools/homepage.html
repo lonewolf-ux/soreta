@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.D. Soreta Electronics Enterprises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.php">
+                <i class="bi bi-lightning-charge-fill"></i>
+                A.D. Soreta Electronics Enterprises            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="auth/login.php">Login</a></li>
+                        <li class="nav-item"><a class="btn btn-primary ms-2" href="auth/register.php">Get Started</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Professional Electronics Repair Services</h1>
+                    <p class="lead mb-4">Fast, reliable, and affordable repair services for all your electronic devices. Trusted since 2005.</p>
+                    <div class="d-flex gap-3">
+                                                    <a href="auth/register.php" class="btn btn-light btn-lg">Book Service</a>
+                            <a href="customer/troubleshooting.php" class="btn btn-outline-light btn-lg">DIY Guide</a>
+                                            </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-tools display-1 opacity-50"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p class="text-muted">Comprehensive repair solutions for all your electronic needs</p>
+            </div>
+            
+            <div class="row g-4">
+                            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section id="troubleshooting" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Troubleshooting Guide</h2>
+                <p class="text-muted">Common problems and quick fixes from our expert technicians</p>
+            </div>
+
+            <div class="row g-4">
+                                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop not turning on</h5>
+                                <p class="card-text text-muted">The laptop does not respond when pressing the power button.</p>
+                                <a href="customer/troubleshooting.php?id=1" class="btn btn-outline-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Phone not charging</h5>
+                                <p class="card-text text-muted">The phone does not charge when connected to the charger.</p>
+                                <a href="customer/troubleshooting.php?id=4" class="btn btn-outline-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Computer running slow</h5>
+                                <p class="card-text text-muted">The computer takes a long time to start up or run programs.</p>
+                                <a href="customer/troubleshooting.php?id=7" class="btn btn-outline-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </section>
+
+    <!-- Customer Feedback -->
+    <section id="feedback" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="text-muted">Real feedback from customers who used our services</p>
+            </div>
+
+            <div class="row">
+                                                            <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title mb-0">new customer</h6>
+                                        <div class="text-warning">★★★★★</div>
+                                    </div>
+                                    <p class="text-muted small">On: No power even with adapter</p>
+                                    <p class="mt-2">test comment</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title mb-0">Customer One</h6>
+                                        <div class="text-warning">★★★★★</div>
+                                    </div>
+                                    <p class="text-muted small">On: Laptop not turning on</p>
+                                    <p class="mt-2">This helped me fix my laptop!</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title mb-0">Customer Two</h6>
+                                        <div class="text-warning">★★★★</div>
+                                    </div>
+                                    <p class="text-muted small">On: No power even with adapter</p>
+                                    <p class="mt-2">I found the issue with the adapter, thanks!</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title mb-0">Customer Three</h6>
+                                        <div class="text-warning">★★★</div>
+                                    </div>
+                                    <p class="text-muted small">On: Laptop powers on but no display</p>
+                                    <p class="mt-2">It was the screen cable in my case.</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="card-title mb-0">Customer Four</h6>
+                                        <div class="text-warning">★★★★★</div>
+                                    </div>
+                                    <p class="text-muted small">On: Phone not charging</p>
+                                    <p class="mt-2">My phone now charges properly.</p>
+                                </div>
+                            </div>
+                        </div>
+                                                </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Us</h2>
+                    <div class="about-content">
+                        <p>Since 2005, we have been providing reliable electronic repair services with quality craftsmanship and excellent customer service.</p>                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                            <span>15+ Years Experience</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                            <span>Warranty on Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Business Hours</h5>
+                        </div>
+                        <div class="card-body">
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-3">Ready to Get Your Device Fixed?</h2>
+            <p class="lead mb-4">Book an appointment today and get professional service from our expert technicians.</p>
+            <a href="auth/register.php" class="btn btn-light btn-lg">Book Appointment Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill text-primary display-6"></i>
+                        <h5>Address</h5>
+                        <p class="text-muted">Manila, Philippines</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-item">
+                        <i class="bi bi-telephone-fill text-primary display-6"></i>
+                        <h5>Phone</h5>
+                        <p class="text-muted">(02) 8123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill text-primary display-6"></i>
+                        <h5>Email</h5>
+                        <p class="text-muted">contact@soreta.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>A.D. Soreta Electronics Enterprises</h5>
+                    <p class="text-muted">Professional electronics repair services since 2005.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted">&copy; 2024 A.D. Soreta Electronics Enterprises. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    .hero-section {
+        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    }
+    
+    .section-title {
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+    
+    .service-card {
+        transition: var(--transition);
+        border: 1px solid var(--border);
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .contact-item {
+        padding: 2rem 1rem;
+    }
+    </style>
+</body>
+</html>
